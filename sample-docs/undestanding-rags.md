@@ -1,0 +1,2 @@
+# RAGs
+With RAG, developers can build powerful product experiences for the enterprise and mitigate hallucinations by producing grounded and verifiable generations. The Chat endpoint comes integrated with RAG features, which greatly simplifies the task of developing RAG-powered applications.
