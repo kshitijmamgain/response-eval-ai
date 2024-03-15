@@ -1,0 +1,24 @@
+{
+    "python": [
+        "What is PySpark, and how does it facilitate big data processing?",
+        "Explain the concept of Resilient Distributed Datasets (RDDs) in PySpark. How are they different from traditional Python data structures?",
+        "What are the advantages of using DataFrame over RDDs in PySpark?",
+        "Describe the transformation and action operations in PySpark. Provide examples of each.",
+        "Explain the significance of lazy evaluation in PySpark. How does it optimize data processing tasks?",
+        "What is the purpose of Spark SQL in PySpark? How does it simplify working with structured data?",
+        "Discuss the role of caching and persistence in PySpark. When should you use these techniques to optimize performance?",
+        "Explain the concept of partitioning in PySpark. How does it affect parallelism and performance in data processing tasks?",
+        "What are the different deployment modes available for running PySpark applications? When would you choose each mode?",
+        "How does PySpark handle fault tolerance in distributed data processing? Explain the role of lineage and checkpointing in ensuring fault tolerance.",
+        "What is NumPy, and how is it used in data engineering tasks?",
+        "Explain the differences between lists and NumPy arrays in Python. When would you choose one over the other in data engineering projects?",
+        "What is Pandas, and how does it facilitate data manipulation and analysis in Python?",
+        "Describe the role of Matplotlib and Seaborn in data visualization with Python. Provide examples of when each library would be used in data engineering projects.",
+        "What are lambda functions in Python, and how are they used in data engineering tasks? Provide an example of when to use a lambda function.",
+        "Explain the concept of list comprehension in Python. How can list comprehension improve code readability and efficiency in data engineering projects?",
+        "Discuss the difference between shallow and deep copying in Python. When would you use each type of copying in data engineering tasks?",
+        "What is the purpose of virtual environments in Python, and why are they important in data engineering projects?",
+        "Describe the role of regular expressions (regex) in data preprocessing and cleaning with Python. Provide an example of when to use regex in data engineering tasks."
+      ]
+  }
+  

@@ -1,0 +1,15 @@
+{  "concept": [
+      "What is data warehousing, and how does it differ from traditional databases?",
+      "Explain the difference between batch processing and real-time processing in the context of data engineering. Provide examples of scenarios where each is applicable.",
+      "What are the key components of a data pipeline, and what role does each component play in the data engineering process?",
+      "What is the CAP theorem, and how does it impact the design of distributed systems in data engineering?",
+      "Describe the process of data normalization and why it's important in database design.",
+      "What is schema-on-read vs. schema-on-write, and how do they influence data storage and processing in data engineering?",
+      "Explain the concept of data partitioning in distributed systems. How does it contribute to scalability and performance?",
+      "What are the different types of joins in SQL, and when would you use each type in data engineering tasks?",
+      "Discuss the role of data governance and data quality in data engineering. How do they impact the overall success of data-driven initiatives?",
+      "What is the Lambda architecture, and how does it address the challenges of real-time and batch processing in data engineering?",
+      "Can you explain what SerDe means in Hive?"
+    ]
+  }
+  

@@ -1,0 +1,15 @@
+{
+    "sql": [
+      "What is SQL, and how is it used in the context of data engineering?",
+      "Explain the differences between SQL's SELECT, INSERT, UPDATE, and DELETE statements. Provide examples of scenarios where each statement would be used in data engineering tasks.",
+      "What are indexes in SQL databases, and how do they impact query performance?",
+      "What is a SQL JOIN, and how does it work? Provide examples of different types of JOINs and when to use them.",
+      "What is normalization, and why is it important in database design? How does normalization improve database performance and data integrity?",
+      "What are SQL views, and how are they used in data engineering?",
+      "Explain the difference between SQL's GROUP BY and ORDER BY clauses. How are they used to manipulate query results?",
+      "What is a subquery in SQL, and how is it different from a JOIN operation? Provide examples of when to use subqueries in data engineering tasks.",
+      "Discuss the role of SQL transactions in data engineering. What are ACID properties, and why are they important?",
+      "What is SQL injection, and how can it be prevented? Why is SQL injection a security concern in data engineering applications?"
+    ]
+  }
+  
