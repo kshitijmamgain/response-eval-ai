@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import plotly.graph_objs as go
+from question_selector import question_list
 
 app = Flask(__name__)
 
@@ -7,7 +8,7 @@ app = Flask(__name__)
 data = {
     'name': '',
     'responses': [],
-    'questions': ['What is your favorite color?', 'What is your favorite food?', 'What is your favorite animal?'],
+    'questions': question_list(),
 }
 
 @app.route('/', methods=['GET', 'POST'])
