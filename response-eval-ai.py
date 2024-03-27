@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import plotly.graph_objs as go
 from question_selector import question_list
+from models.response_validation import response_evaluator
 
 app = Flask(__name__)
 
@@ -9,6 +10,7 @@ data = {
     'name': '',
     'responses': [],
     'questions': question_list(),
+    'evaluations': [],
 }
 
 @app.route('/', methods=['GET', 'POST'])
@@ -25,7 +27,8 @@ def question(index):
         # Store user's response
         response = request.form['response']
         data['responses'].append(response)
-
+        evaluation=response_evaluator(data['questions'],data['responses'])
+        data['evaluations'].append(evaluation)
         # If there are more questions, redirect to the next question
         if index + 1 < len(data['questions']):
             return redirect(url_for('question', index=index + 1))

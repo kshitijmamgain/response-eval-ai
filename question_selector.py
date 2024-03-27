@@ -8,7 +8,7 @@ def read_questions(category):
         questions = json.load(file)
     return questions
 
-def question_list(ques_num=7,categories=['concept','python','sql']):
+def question_list(ques_num=5,categories=['concept']):
     
     # List to store selected questions
     selected_questions = set()
