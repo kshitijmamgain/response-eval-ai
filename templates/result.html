@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Flask App</title>
+    <!-- Include Bootstrap CSS (or your own CSS for styling) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Thank you, {{ name }}!</h1>
-    <div id="pie-chart">
-        {{ pie_chart | safe }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Embed first pie chart -->
+                {{ div1 | safe }}
+            </div>
+            <div class="col-md-4">
+                <!-- Embed second pie chart -->
+                {{ div2 | safe }}
+            </div>
+            <div class="col-md-4">
+                <!-- Embed third pie chart -->
+                {{ div3 | safe }}
+            </div>
+        </div>
     </div>
+    <!-- Include Plotly.js library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </body>
 </html>

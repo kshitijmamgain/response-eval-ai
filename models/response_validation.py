@@ -77,25 +77,25 @@ def response_evaluator(question, answer):
     sources = [
     {
         "title": "Data Quarkle", 
-        "filename": "../sample-docs/concept-dataquarkle.md"},
+        "filename": "sample-docs/concept-dataquarkle.md"},
     {
         "title": "RAGs", 
-        "filename": "../sample-docs/undestanding-rags.md"},
+        "filename": "sample-docs/undestanding-rags.md"},
         {
         "title": "sample", 
-        "filename": "../sample-docs/sample.md"},    
+        "filename": "sample-docs/sample.md"},    
         {
         "title": "de-concepts", 
-        "filename": "../sample-docs/understanding-de-concepts.md"}, 
+        "filename": "sample-docs/understanding-de-concepts.md"}, 
 ]
 
 # Create an instance of the Datastore class with the given sources
-    datastore = Datastore(sources)
+    datastore = Datastore(sources, co)
     
     _response = ResponseEvalAI(datastore)
     expected_answer = _response.run(prompt=question, temperature=0.1)
 
-    evaluate_response = guard(ResponseEvalAI.run,
+    evaluate_response = guard(_response.run,
                 model='command-nightly',
                 prompt_params={'question':question, 'answer': answer, 'expected_answer':expected_answer},
                 temperature=0.3

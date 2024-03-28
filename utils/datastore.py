@@ -23,8 +23,9 @@ class Datastore:
     index(): Indexes the documents for efficient retrieval.
     """
 
-    def __init__(self, raw_documents: List[Dict[str, str]]):
+    def __init__(self, raw_documents: List[Dict[str, str]], co):
         self.raw_documents = raw_documents  # raw documents
+        self.co = co
         self.chunks = []            # chunked version of documents
         self.chunks_embs = []       # embeddings of chunked documents
         self.retrieve_top_k = 10
@@ -32,6 +33,7 @@ class Datastore:
         self.load_and_chunk()  # load raw documents and break into chunks
         self.embed() # generate embeddings for each chunk
         self.index() # store embeddings in an index
+        
 
 
     def load_and_chunk(self) -> None:
@@ -64,7 +66,7 @@ class Datastore:
         for i in range(0, self.chunks_len, batch_size):
             batch = self.chunks[i : min(i + batch_size, self.chunks_len)]
             texts = [item["text"] for item in batch]
-            chunks_embs_batch = co.embed(
+            chunks_embs_batch = self.co.embed(
                 texts=texts, model="embed-english-v3.0", input_type="search_document"
             ).embeddings
             self.chunks_embs.extend(chunks_embs_batch)
@@ -85,7 +87,7 @@ class Datastore:
 
     def search_and_rerank(self, query: str) -> List[Dict[str, str]]:
         # SEARCH
-        query_emb = co.embed(
+        query_emb = self.co.embed(
                   texts=[query], model="embed-english-v3.0", input_type="search_query"
               ).embeddings
 
@@ -94,7 +96,7 @@ class Datastore:
         # RERANK
         chunks_to_rerank = [self.chunks[chunk_id]["text"] for chunk_id in chunk_ids]
 
-        rerank_results = co.rerank(
+        rerank_results = self.co.rerank(
             query=query,
             documents=chunks_to_rerank,
             top_n=self.rerank_top_k,
